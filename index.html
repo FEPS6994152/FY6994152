@@ -149,6 +149,29 @@ Table 1: Data on cost and lifespan of bridge repairs
 
     </p>
 
+   <head>
+       <title>Change Button Colour</title>
+   </head>     
+        <body>
+            <button id="colorButton">Click me to change colour</button>
+            
+            <script>
+                //get a reference to the button color
+                var button = document.getElementByld("colorButton");
+
+                //Function to change the button element
+                function changeColor(){
+                    //Generate a random color (hexadecimal)
+                    var randomColor - "#" + Math.floor(Math.random()*16777215).toString(16);
+
+                    //set the button's background color to the random color
+                    button.style.backgroundColor = randomColor;
+                }
+
+                //Add a click event listener to the button
+                button.addEventListener("click",changeColor);
+            </script>
+
     <!-- //////////////////////////////////////////////////////////////////////////////// -->
   <!-- ////////////////////////////// Adding last update ////////////////////////////// -->
   <!-- //////////////////////////////////////////////////////////////////////////////// -->
