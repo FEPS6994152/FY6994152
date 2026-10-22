@@ -147,9 +147,29 @@ Table 1: Data on cost and lifespan of bridge repairs
         Campbell, C, Cristianini, N and Smola, A (2000), Query learning with large margin classifiers.
         In: Proc. 17th Internat. Conf.on Machine Learning. Morgan Kaufman, Stanford, CA,111-118.
         </pre>
+  </p>
+<div id="chart_div"></div>
+         <script type="text/javascript">
+              google.charts.load('current',{ 'packages' : ['corechart']});
+              google.charts.setOnLoadCallback(drawChart)
+                   function drawChart(){
+                        var data = google.visulization.arrayToDataTable([
+                             ['Task','Hours per Day'],
+                             ['Work',8],
+                             ['Sleep',8],
+                             ['Eat'2],
+                             ['Study',4],
+                             ['Exercise',2]
+                             ]);
+                        var options ={
+                             title: 'My Daily Activities'
+                        };
 
-    </p>
-
+                        var chat = new google.visualization.PieChart(document.getElementByld('chart_div'));
+                        chart.draw(data, options);
+                   }
+         </script>
+                             
    <head>
        <title>Change Button Colour</title>
    </head>     
