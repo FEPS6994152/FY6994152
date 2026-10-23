@@ -148,11 +148,12 @@ Table 1: Data on cost and lifespan of bridge repairs
         In: Proc. 17th Internat. Conf.on Machine Learning. Morgan Kaufman, Stanford, CA,111-118.
         </pre>
   </p>
+         <body>
 <div id="chart_div"></div>
          <script type="text/javascript">
               google.charts.load('current',{ 'packages' : ['corechart']});
               google.charts.setOnLoadCallback(drawChart);
-                   function drawChart(){
+                   function drawChart() {
                         var data = google.visulization.arrayToDataTable([
                              ['Task','Hours per Day'],
                              ['Work',8],
@@ -161,7 +162,7 @@ Table 1: Data on cost and lifespan of bridge repairs
                              ['Study',4],
                              ['Exercise',2]
                              ]);
-                        var options ={
+                        var options = {
                              title: 'My Daily Activities'
                         };
 
@@ -169,6 +170,7 @@ Table 1: Data on cost and lifespan of bridge repairs
                         chart.draw(data, options);
                    }
          </script>
+         </body>
                              
    <head>
        <title>Change Button Colour</title>
