@@ -151,10 +151,10 @@ Table 1: Data on cost and lifespan of bridge repairs
          
 <div id="chart_div"></div>
          <script type="text/javascript">
-              google.charts.load('current',{ 'packages' : ['corechart']});
+              google.charts.load('current',{'packages':['corechart']});
               google.charts.setOnLoadCallback(drawChart);
-                   function drawChart() {
-                        var data = google.visulization.arrayToDataTable([
+                   function drawChart(){
+                        var data = google.visualization.arrayToDataTable([
                              ['Task','Hours per Day'],
                              ['Work',8],
                              ['Sleep',8],
@@ -163,7 +163,7 @@ Table 1: Data on cost and lifespan of bridge repairs
                              ['Exercise',2]
                              ]);
                         var options = {
-                             title: 'My Daily Activities'
+                             title:'My Daily Activities'
                         };
 
                         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
