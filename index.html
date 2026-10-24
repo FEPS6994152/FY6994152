@@ -8,7 +8,7 @@
               google.charts.load('current',{'packages':['corechart', 'scatter']});
               google.charts.setOnLoadCallback(drawChart);
                    function drawChart(){
-                        var data = google.visualization.arrayToDataTable([
+                        var pieData = google.visualization.arrayToDataTable([
                              ['Task','Hours per Day'],
                              ['Work',8],
                              ['Sleep',8],
@@ -16,17 +16,16 @@
                              ['Study',4],
                              ['Exercise',2]
                              ]);
-                        var options = {
+                        var pieOptions = {
                              title:'My Daily Activities'
                         };
-                        var chart = new google.visualization.PieChart(document.getElementById('pie_chart_div'));
-                        chart.draw(data, options);
-                   }
-     function drawChart() {
-          var data = new google.visualization.DataTable();
-          data.addColumn('number','Age');
-          data.addColumn('number','Salary');
-          data.addRows([
+                        var pieChart = new google.visualization.PieChart(document.getElementById('pie_chart_div'));
+                        pieChart.draw(pieData, pieOptions);
+                   
+          var scatterData = new google.visualization.DataTable();
+          scatterData.addColumn('number','Age');
+          scatterData.addColumn('number','Salary');
+          scatterData.addRows([
                [25, 40000],
                [30, 50000],
                [35, 60000],
@@ -34,13 +33,13 @@
                [45,80000],
                [50, 90000]
                ]);
-          var options = {
+          var scatterOptions = {
                title: 'Age vs. Salary',
                hAxis: { title:'Age' },
                vAxis: { title: 'Salary' }
           };
-         var chart = new google.visualization.ScatterChart(document.getElementById('scatter_chart_div'));
-          chart.draw(data, options);
+         var scatterChart = new google.visualization.ScatterChart(document.getElementById('scatter_chart_div'));
+          Scatterchart.draw(ScatterData, ScatterOptions);
      }
          </script>
     
@@ -169,9 +168,9 @@ classifier confidence to drop, as in Vlachos (2008).
 Table 1: Data on cost and lifespan of bridge repairs
 </pre>
 <body>
-<div id="scatter_chart_div" style="width: 900px; height: 500px;"></div></body>
-         <body>
-<div id="pie_chart_div" style="width: 900px; height: 500px;"></div></body>
+<div id="scatter_chart_div" style="width: 900px; height: 500px;"></div>    
+<div id="pie_chart_div" style="width: 900px; height: 500px;"></div>
+</body>
         </p>
          
         <h3 id="References">References</h3>
